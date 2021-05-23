@@ -34,9 +34,9 @@ public class MainActivity extends AppCompatActivity {
 
         if(edns.length()==0){
             new AlertDialog.Builder(MainActivity.this)
-                    .setTitle("ProBlem")
-                    .setMessage("Please enter your NTD amount")
-                    .setPositiveButton("OK",null).show();
+                    .setTitle(R.string.problem)
+                    .setMessage(R.string.problem_info)
+                    .setPositiveButton(R.string.ok,null).show();
         }else {
 
             Float ednf=Float.parseFloat(edns);
@@ -45,14 +45,14 @@ public class MainActivity extends AppCompatActivity {
             tvUs.setText(""+us);
             tvJp.setText(""+jp);
             new AlertDialog.Builder(MainActivity.this)
-                    .setTitle("Result")
-                    .setMessage("USD is "+us)
-                    .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                    .setTitle(R.string.result)
+                    .setMessage(getString(R.string.usd_is)+us)
+                    .setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
                             edntd.setText("");
-                            tvJp.setText("None");
-                            tvUs.setText("None");
+                            tvJp.setText(R.string.none);
+                            tvUs.setText(R.string.none);
                         }
                     }).show();
 
