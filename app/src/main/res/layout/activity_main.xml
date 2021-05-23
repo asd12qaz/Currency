@@ -30,13 +30,14 @@
         app:layout_constraintTop_toTopOf="@+id/textView" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/button_go"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="40dp"
-        android:text="Button"
+        android:onClick="ntdgo"
+        android:text="GO"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ed_ntd" />
 
@@ -47,8 +48,8 @@
         android:layout_marginTop="30dp"
         android:text="JP"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        app:layout_constraintStart_toStartOf="@+id/button"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+        app:layout_constraintStart_toStartOf="@+id/button_go"
+        app:layout_constraintTop_toBottomOf="@+id/button_go" />
 
     <TextView
         android:id="@+id/textView3"
